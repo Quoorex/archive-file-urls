@@ -4,7 +4,9 @@ version = "1.0.0"
 description = "Submit URLs listed inside a file to website archival services"
 authors = ["Quoorex <46283604+Quoorex@users.noreply.github.com>"]
 license = "MIT"
-repository = ""
+readme = "README.md"
+repository = "https://github.com/Quoorex/archive-file-urls"
+keywords = ["Archiving"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
