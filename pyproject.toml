@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "archive-file-urls"
+version = "1.0.0"
+description = "Archive websites listed inside a file"
+authors = ["Quoorex"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+archivenow = "^2020.7.18"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^21.7b0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
