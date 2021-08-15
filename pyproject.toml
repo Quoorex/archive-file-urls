@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "archive-file-urls"
-version = "1.0.0"
+version = "1.0.1"
 description = "Submit URLs listed inside a file to website archival services"
 authors = ["Quoorex <46283604+Quoorex@users.noreply.github.com>"]
 license = "MIT"
