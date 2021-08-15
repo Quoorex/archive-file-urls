@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "archive-file-urls"
 version = "1.0.0"
-description = "Archive websites listed inside a file"
-authors = ["Quoorex"]
+description = "Submit URLs listed inside a file to website archival services"
+authors = ["Quoorex <46283604+Quoorex@users.noreply.github.com>"]
 license = "MIT"
+repository = ""
 
 [tool.poetry.dependencies]
 python = "^3.9"
