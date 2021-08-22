@@ -4,7 +4,6 @@ import sys
 import re
 from pathlib import Path
 import argparse
-import json
 
 from archivenow import archivenow
 
@@ -19,7 +18,7 @@ def run():
         "-o",
         "--output",
         dest="output_file",
-        help="File to output all urls to",
+        help="Text file to output all urls to",
     )
     parser.add_argument(
         "-d",
@@ -40,7 +39,7 @@ def run():
     file = Path(args.file).absolute()
 
     if args.output_file:
-        output_file = Path(args.output_file).with_suffix(".json").absolute()
+        output_file = Path(args.output_file).with_suffix(".txt").absolute()
         if output_file.exists():
             sys.exit(f"The file {output_file} does already exist")
 
@@ -51,11 +50,12 @@ def run():
     # even if the program doesn't finish.
     random.shuffle(urls)
 
-    results = dict()
+    results = []
     for url in urls:
-        results[url] = archivenow.push(url, "ia")
+        results.append(archivenow.push(url, "ia")[0])
         time.sleep(args.delay)
 
     if args.output_file:
         with open(output_file, "w") as f:
-            f.write(json.dumps(results, indent=2))
+            for result in results:
+                f.write(result)
