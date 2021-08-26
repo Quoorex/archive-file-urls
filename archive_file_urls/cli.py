@@ -1,3 +1,4 @@
+import os
 import time
 import random
 import sys
@@ -58,4 +59,4 @@ def run():
     if args.output_file:
         with open(output_file, "w") as f:
             for result in results:
-                f.write(result)
+                f.write(result + os.linesep)
